@@ -3,7 +3,7 @@ using GalloTube.Interfaces;
 using GalloTube.Models;
 using MySql.Data.MySqlClient;
 
-namespace GalloTag.Repositories;
+namespace GalloTube.Repositories;
 
 public class TagRepository : ITagRepository
 {

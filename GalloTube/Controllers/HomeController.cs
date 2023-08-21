@@ -10,7 +10,7 @@ public class HomeController : Controller
     private readonly ILogger<HomeController> _logger;
     private readonly IVideoRepository _videoRepository;
 
-    public HomeController(ILogger<HomeController> logger, IVideoRepository movieRepository)
+    public HomeController(ILogger<HomeController> logger, IVideoRepository videoRepository)
     {
         _logger = logger;
         _videoRepository = videoRepository;

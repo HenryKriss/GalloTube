@@ -9,9 +9,9 @@ public class Video
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
 
-    [Display(Name = "Título")]
-    [Required(ErrorMessage = "O Título é obrigatório")]
-    [StringLength(100, ErrorMessage = "O Título deve possuir no máximo 100 caracteres")]
+    [Display(Name = "Nome")]
+    [Required(ErrorMessage = "O Nome é obrigatório")]
+    [StringLength(100, ErrorMessage = "O Nome deve possuir no máximo 100 caracteres")]
     public string Name { get; set; }
 
     [Display(Name = "Descrição")]
@@ -34,7 +34,7 @@ public class Video
 
     [Display(Name = "Arquivo do Video")]
     [Required(ErrorMessage = "O Arquivo do Vídeo é obrigatório")]
-    public byte VideoFile { get; set; }
+    public string VideoFile { get; set; }
 
     public ICollection<VideoTag> Videos { get; set; }
 }

@@ -62,12 +62,12 @@ public class VideoRepository : IVideoRepository
             Video video = new()
             {
                 Id = reader.GetInt32("id"),
-                Name = reader.GetString("title"),
-                Description = reader.GetString("originalTitle"),
+                Name = reader.GetString("name"),
+                Description = reader.GetString("description"),
                 UploadDate = reader.GetDateTime("uploaddate"),
                 Duration = reader.GetInt16("duration"),
                 Thumbnail = reader.GetString("thumbnail"),
-                VideoFile = reader.GetByte("videofile")
+                VideoFile = reader.GetString("videofile")
             };
             videos.Add(video);
         }
@@ -93,12 +93,12 @@ public class VideoRepository : IVideoRepository
             Video video = new()
             {
                 Id = reader.GetInt32("id"),
-                Name = reader.GetString("title"),
-                Description = reader.GetString("originalTitle"),
+                Name = reader.GetString("name"),
+                Description = reader.GetString("description"),
                 UploadDate = reader.GetDateTime("uploaddate"),
                 Duration = reader.GetInt16("duration"),
                 Thumbnail = reader.GetString("thumbnail"),
-                VideoFile = reader.GetByte("videofile")
+                VideoFile = reader.GetString("videofile")
             };
             connection.Close();
             return video;
